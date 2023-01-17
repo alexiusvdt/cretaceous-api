@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CretaceousApi.Controllers;
 
+//keep this for reference notes only
+
+
 [ApiController]
 [Route("[controller]")]
 //controllerbase does NOT support views
