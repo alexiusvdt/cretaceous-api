@@ -15,11 +15,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
+else
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthorization();
 
+//MVC we mapped a specific route, here we can use attributes added to api controllers/routes to properly nav requests.
 app.MapControllers();
 
 app.Run();
