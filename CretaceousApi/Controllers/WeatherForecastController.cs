@@ -4,6 +4,7 @@ namespace CretaceousApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+//controllerbase does NOT support views
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -18,6 +19,8 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
+    //BOTH the overall [route()] and specified path modify the url
+    //ONLY matching the /WeatherForecast endpoint
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
