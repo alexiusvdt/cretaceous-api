@@ -14,3 +14,6 @@ create endpoints for GET/POST:
   api/animals GET       -> return all objects
   api/animals/{id} GET  -> return one object based on ID
   api/animals POST      -> add new to db, requiring object literal of an animal
+create endpoints for PUT/DEL:
+  api/animals/{id} PUT  -> changes existing information (Update)
+  api/animals/{id} DEL  -> del it
